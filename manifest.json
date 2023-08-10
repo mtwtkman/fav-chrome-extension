@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Fav",
+  "version": "0.0.1",
+  "description": "Bookmarks on context menu",
+  "icons": {
+    "16": "icon16.png"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": [
+    "bookmarks",
+    "contextMenus"
+  ]
+}

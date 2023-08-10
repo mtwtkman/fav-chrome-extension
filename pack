@@ -1,0 +1,6 @@
+#!/bin/sh
+
+dest="chrome_extension/fav"
+mkdir -p $dest
+cp icon16.png manifest.json content-script.js service-worker.js $dest
+mv $dest $1/chrome_extension
